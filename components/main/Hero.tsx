@@ -1,4 +1,5 @@
 import React from "react";
+import HeroContents from "../sub/HeroContents";
 
 export default function Hero() {
   return (
@@ -14,6 +15,7 @@ export default function Hero() {
             type='video/webm'
         />
       </video>
+      <HeroContents />
     </div>
   );
 }
