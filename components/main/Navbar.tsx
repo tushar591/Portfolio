@@ -10,9 +10,16 @@ const Navbar = () => {
           href="#about-me"
           className="h-auto w-auto flex flex-row items-center"
         >
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            Tushar Portfolio
-          </span>
+          <div className="text-white py-5 flex justify-between items-center">
+            {/* Logo */}
+            <div className="text-lg font-semibold cursor-pointer">
+              <span className="text-[#8245ec]">&lt;</span>
+              <span className="text-white">Tushar</span>
+              <span className="text-[#8245ec]">/</span>
+              <span className="text-white">Bharat</span>
+              <span className="text-[#8245ec]">&gt;</span>
+            </div>
+          </div>
         </a>
 
         <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">

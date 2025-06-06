@@ -15,26 +15,32 @@ export default function HeroContents() {
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-3 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          <span>
-            Hi, I&apos;m{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              Tushar Bharat{" "}
-            </span> 
-            <RotatingText
-              texts={["Web Developer", "Coder!", "UI/UX Designer"]}
-              mainClassName="px-2 sm:px-2 md:px-2 bg-cyan-500 text-black overflow-hidden py-1 sm:py-1 md:py-2 justify-left rounded-lg"
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden pb-1 sm:pb-2 md:pb-1"
-              transition={{ type: "spring", damping: 30, stiffness: 400 }}
-              rotationInterval={2000}
-            />
+          <span className="">
+            Hi, I&apos;m <span> Tushar Bharat </span>
+            <div className="">
+              <RotatingText
+                texts={["Web Developer", "Coder", "UI/UX Designer"]}
+                mainClassName="
+    inline-block
+    bg-gradient-to-r from-purple-500 to-cyan-500
+    bg-clip-text text-transparent
+    font-bold
+    text-3xxl md:text-3xxl
+    leading-tight
+    overflow-hidden whitespace-nowrap
+  "
+                staggerFrom="last"
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 overflow-hidden pb-0"
+                transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                rotationInterval={3500}
+              />
+            </div>
           </span>
         </motion.div>
 
@@ -48,17 +54,16 @@ export default function HeroContents() {
           other modern technologies to create seamless user experiences and
           efficient solutions.
         </motion.p>
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+        <div className="flex justify-center align-items-left max-w-[600px]">
+          <motion.a  variants={slideInFromLeft(1)}>
+          <button > Download CV</button>
+          </motion.a>
+        </div>
       </div>
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="w-full h-full flex justify-center items-center"
+        className="hidden md:flex w-full h-full justify-center items-center"
       >
         <Image
           src="/mainIconsdark.svg"
