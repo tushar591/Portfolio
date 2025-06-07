@@ -249,6 +249,12 @@ export const Skill_data = [
       width: 60,
       height: 60,
     },
+    {
+      skill_name: "Github",
+      Image: "/github.png",
+      width: 60,
+      height: 60,
+    }
   ];
   
   
