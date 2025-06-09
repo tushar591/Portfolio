@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
-import ScrollReveal from "./ScrollReveal";
 
 const SkillText = () => {
   const { ref, inView } = useInView({
@@ -22,17 +21,8 @@ const SkillText = () => {
         animate={inView ? "visible" : "hidden"}
         className="text-3xl sm:text-4xl font-bold text-white"
       >
-        <ScrollReveal
-          scrollContainerRef={window}
-          baseOpacity={0}
-          enableBlur={true}
-          baseRotation={5}
-          blurStrength={10}
-        >
-          SKILLS
-        </ScrollReveal>
-
-        <div className="w-24 h-1 m-5 bg-[#8245ec] mx-auto mt-2"></div>
+        SKILLS
+        <div className="w-24 my-2 h-1 bg-[#8245ec] mx-auto"></div>
       </motion.div>
       <motion.div
         variants={slideInFromRight(0.5)}
