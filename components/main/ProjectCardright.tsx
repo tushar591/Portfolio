@@ -8,7 +8,7 @@ const springValues = {
   mass: 2,
 };
 
-export default function TiltedCard({
+export default function TiltedRightCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
@@ -75,7 +75,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
+      className="ml-20 relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
       style={{
         height: containerHeight,
         width: containerWidth,
