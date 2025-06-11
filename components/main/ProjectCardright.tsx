@@ -111,7 +111,7 @@ export default function TiltedRightCard({
         />
 
         {displayOverlayContent && overlayContent && (
-          <motion.div className="absolute bg-transparent rounded-md p-2 text-black top-5 left-15 z-[2] will-change-transform [transform:translateZ(30px)]">
+          <motion.div className="absolute bg-white font-figtree font-bold tracking-tight shadow-[0_5px_30px_#ffffff99] rounded-md p-2 text-black top-5 left-38 z-[2] will-change-transform [transform:translateZ(30px)]">
             {overlayContent}
           </motion.div>
         )}

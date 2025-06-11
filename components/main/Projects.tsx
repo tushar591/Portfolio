@@ -1,5 +1,4 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
 import TiltedCard from "./ProjectCard";
 import TiltedRightCard from "./ProjectCardright";
 
@@ -7,7 +6,10 @@ const Projects = () => {
   return (
     <>
       {/* Portfolio Projects Section */}
-      <section className="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16 text-white">
+      <section
+        id="projects"
+        className="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16 text-white"
+      >
         {/* Section Title */}
         <h2 className="text-3xl sm:text-[40px] bg-gray-900 relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-blue-400 sm:border-b-2 border-blue-400">
           My Projects
@@ -28,46 +30,49 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-          <TiltedCard
-            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-            altText="Course-Heaven"
-            captionText="Course-Heaven"
-            containerHeight="500px"
-            containerWidth="500px"
-            imageHeight="450px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <p className="font-weight box-shadow-[0 5px 30px #06001059] font-family: Figtree bg-[#0006] ">Course-Heaven</p>
-            }
-          />
+            <TiltedCard
+              imageSrc="/project1.png"
+              altText="Course-Heaven"
+              captionText="Course-Heaven"
+              containerHeight="500px"
+              containerWidth="500px"
+              imageHeight="300px"
+              imageWidth="450px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={<p className="">Course-Heaven</p>}
+            />
           </a>
 
           {/* Project Details */}
           <div className="w-full">
             <h3 className="text-blue-300 font-bold text-2xl md:text-4xl">
-              ProCodrr
+              Course-Heaven
             </h3>
             <span className="text-blue-300 text-base md:text-lg">
-              (Coding Platform)
+              (Learning Platform)
             </span>
             <p className="text-justify text-sm md:text-base mt-2 text-white">
-              Deeply understand advanced concepts, practice with real-world
-              exercises, build expertise with hands-on projects to boost your
-              career.
+              A full-featured MERN Stack based E-Commerce (CourseHeaven
+              E-learning web application) that enables users to browse courses,
+              Buy courses, register/login securely. Admins can create course,
+              edit, and delete courses through a dedicated dashboard. Payment
+              integration with Stripe, secure user authentication, and a
+              responsive user interface.
             </p>
 
             {/* Technology Tags */}
             <ul className="flex flex-wrap gap-2 mt-2">
               {[
-                "react.js",
+                "react",
+                "tailwind.css",
+                "JWT",
                 "express.js",
                 "node.js",
-                "swiper.js",
+                "stripe",
                 "mongoDB",
                 "mongoose",
                 "css",
@@ -90,37 +95,31 @@ const Projects = () => {
           {/* Content on left side for this project */}
           <div className="order-2 sm:order-1 w-full">
             <h3 className="text-yellow-300 font-bold text-2xl md:text-4xl">
-              EazyGrad
+              Snake-Game
             </h3>
-            <span className="text-yellow-300 text-base md:text-lg">
-              (EdTech Startup)
-            </span>
-            <p className="text-justify text-sm md:text-base mt-2 text-white">
-              Being a lead developer, revamped the site to a highly responsive,
-              and interactive website. Created new features and pages. Worked as
-              a team with product manager and ux designer.
-            </p>
+            <span className="text-yellow-300 text-base md:text-lg">(Game)</span>
+            <div className="w-full">
+              <p className="text-justify text-sm md:text-base mt-2 text-white">
+                A classic Snake game built using HTML, CSS, and JavaScript. It
+                features real-time gameplay, score tracking, and sound effects
+                including food eating, game over, and background sounds. The
+                game increases difficulty as the snake grows, providing an
+                engaging and nostalgic arcade experience in the browser.
+              </p>
+            </div>
 
             {/* Technology Tags */}
             <ul className="flex flex-wrap gap-2 mt-2">
-              {[
-                "react.js",
-                "express.js",
-                "node.js",
-                "swiper.js",
-                "mongoDB",
-                "mongoose",
-                "css",
-                "javascript",
-                "figma",
-              ].map((tech) => (
-                <li
-                  key={tech}
-                  className="border rounded-[50px] border-gray-400 px-[10px] py-[5px] text-sm md:text-base text-white"
-                >
-                  #{tech}
-                </li>
-              ))}
+              {["html", "tailwind.css", "css", "javascript", "figma"].map(
+                (tech) => (
+                  <li
+                    key={tech}
+                    className="border rounded-[50px] border-gray-400 px-[10px] py-[5px] text-sm md:text-base text-white"
+                  >
+                    #{tech}
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
@@ -133,30 +132,27 @@ const Projects = () => {
             href="#"
             className="order-1 pl-10 sm:order-2 flex relative justify-center sm:justify-start"
           >
-             <TiltedRightCard
-            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-            altText="Kendrick Lamar - GNX Album Cover"
-            captionText="Kendrick Lamar - GNX"
-            containerHeight="500px"
-            containerWidth="500px"
-            imageHeight="450px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <p className=" ">Kendrick Lamar - GNX</p>
-            }
-          />
-          <a
-            href="https://procodrr.com"
-            className="flex relative justify-center sm:justify-start"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
+            <TiltedRightCard
+              imageSrc="/Snake-game.png"
+              altText="Snake-Game"
+              captionText="Snake-Game"
+              containerHeight="500px"
+              containerWidth="500px"
+              imageHeight="300px"
+              imageWidth="450px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={<p className="">Snake-Game</p>}
+            />
+            <a
+              href="https://snake-game-beta-lyart.vercel.app/"
+              className="flex relative justify-center sm:justify-start"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
           </a>
         </div>
 
@@ -165,30 +161,28 @@ const Projects = () => {
           {/* Timeline elements for desktop */}
           <div className="h-[1px] left-[10%] right-1/2 bg-blue-400 absolute top-1/2 hidden sm:block"></div>
           <div className="w-4 h-4 rounded-full border-[3px] border-blue-300 absolute left-1/2 -translate-x-1/2 bg-gray-900 z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
-          
+
           <a
             href="https://procodrr.com"
             className="flex pr-20 w-full relative justify-center sm:justify-start"
             target="_blank"
             rel="noopener noreferrer"
           >
-          <TiltedCard
-            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-            altText="Kendrick Lamar - GNX Album Cover"
-            captionText="Kendrick Lamar - GNX"
-            containerHeight="500px"
-            containerWidth="500px"
-            imageHeight="450px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <p className=" ">Kendrick Lamar - GNX</p>
-            }
-          />
+            <TiltedCard
+              imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+              altText="Kendrick Lamar - GNX Album Cover"
+              captionText="Kendrick Lamar - GNX"
+              containerHeight="500px"
+              containerWidth="500px"
+              imageHeight="450px"
+              imageWidth="300px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={<p className=" ">Kendrick Lamar - GNX</p>}
+            />
           </a>
 
           {/* Project Details */}
@@ -228,8 +222,6 @@ const Projects = () => {
             </ul>
           </div>
         </div>
-
-        
       </section>
     </>
   );

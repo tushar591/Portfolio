@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import Image from "next/image";
 import RotatingText from "./RotatingText";
-import Tilt from 'react-parallax-tilt';
+import Tilt from "react-parallax-tilt";
 
 export default function HeroContents() {
   return (
@@ -57,8 +57,8 @@ export default function HeroContents() {
           efficient solutions.
         </motion.p>
         <div className="flex mt-3 justify-center align-items-left max-w-[600px]">
-          <motion.a  variants={slideInFromLeft(1)}>
-          <button > Download CV</button>
+          <motion.a variants={slideInFromLeft(1)}>
+            <button> Download CV</button>
           </motion.a>
         </div>
       </div>
@@ -68,22 +68,21 @@ export default function HeroContents() {
         className="hidden md:justify-center md:flex w-full h-full"
       >
         <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
-            
-            <Image
-              src="/mainIconsdark.svg"
-              alt="work icons"
-              height={650}
-              width={650}
-            />
-          </Tilt>
+          className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+          tiltMaxAngleX={20}
+          tiltMaxAngleY={20}
+          perspective={1000}
+          scale={1.05}
+          transitionSpeed={1000}
+          gyroscope={true}
+        >
+          <Image
+            src="/mainIconsdark.svg"
+            alt="work icons"
+            height={650}
+            width={650}
+          />
+        </Tilt>
       </motion.div>
     </motion.div>
   );
