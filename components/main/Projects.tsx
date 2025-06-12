@@ -18,7 +18,7 @@ const Projects = () => {
         {/* Vertical Timeline Line - Hidden on mobile, visible on desktop */}
         <div className="w-[2px] hidden sm:block bg-blue-400 absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
 
-        {/* Project 1: ProCodrr */}
+        {/* Project 1 */}
         <div className="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[20px] items-center sm:mt-20 relative">
           {/* Timeline elements for desktop */}
           <div className="h-[1px] left-[10%] right-1/2 bg-blue-400 absolute top-1/2 hidden sm:block"></div>
@@ -33,7 +33,7 @@ const Projects = () => {
             <TiltedCard
               imageSrc="/project1.png"
               altText="Course-Heaven"
-              captionText="Course-Heaven"
+              captionText=""
               containerHeight="500px"
               containerWidth="500px"
               imageHeight="300px"
@@ -129,13 +129,14 @@ const Projects = () => {
 
           {/* Laptop Frame with Phone Screen on right side */}
           <a
-            href="#"
+            href="https://snake-game-beta-lyart.vercel.app/"
+            target="_blank"
             className="order-1 pl-10 sm:order-2 flex relative justify-center sm:justify-start"
           >
             <TiltedRightCard
               imageSrc="/Snake-game.png"
               altText="Snake-Game"
-              captionText="Snake-Game"
+              captionText=""
               containerHeight="500px"
               containerWidth="500px"
               imageHeight="300px"
@@ -147,81 +148,10 @@ const Projects = () => {
               displayOverlayContent={true}
               overlayContent={<p className="">Snake-Game</p>}
             />
-            <a
-              href="https://snake-game-beta-lyart.vercel.app/"
-              className="flex relative justify-center sm:justify-start"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
+            
           </a>
         </div>
 
-        {/* Project 3: Harigurus */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[20px] items-center sm:mt-20 relative">
-          {/* Timeline elements for desktop */}
-          <div className="h-[1px] left-[10%] right-1/2 bg-blue-400 absolute top-1/2 hidden sm:block"></div>
-          <div className="w-4 h-4 rounded-full border-[3px] border-blue-300 absolute left-1/2 -translate-x-1/2 bg-gray-900 z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
-
-          <a
-            href="https://procodrr.com"
-            className="flex pr-20 w-full relative justify-center sm:justify-start"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <TiltedCard
-              imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-              altText="Kendrick Lamar - GNX Album Cover"
-              captionText="Kendrick Lamar - GNX"
-              containerHeight="500px"
-              containerWidth="500px"
-              imageHeight="450px"
-              imageWidth="300px"
-              rotateAmplitude={12}
-              scaleOnHover={1.2}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={true}
-              overlayContent={<p className=" ">Kendrick Lamar - GNX</p>}
-            />
-          </a>
-
-          {/* Project Details */}
-          <div className="w-full">
-            <h3 className="text-blue-300 font-bold text-2xl md:text-4xl">
-              ProCodrr
-            </h3>
-            <span className="text-blue-300 text-base md:text-lg">
-              (Coding Platform)
-            </span>
-            <p className="text-justify text-sm md:text-base mt-2 text-white">
-              Deeply understand advanced concepts, practice with real-world
-              exercises, build expertise with hands-on projects to boost your
-              career.
-            </p>
-
-            {/* Technology Tags */}
-            <ul className="flex flex-wrap gap-2 mt-2">
-              {[
-                "react.js",
-                "express.js",
-                "node.js",
-                "swiper.js",
-                "mongoDB",
-                "mongoose",
-                "css",
-                "javascript",
-                "figma",
-              ].map((tech) => (
-                <li
-                  key={tech}
-                  className="border rounded-[50px] border-gray-400 px-[10px] py-[5px] text-sm md:text-base text-white"
-                >
-                  #{tech}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </section>
     </>
   );
