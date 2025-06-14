@@ -58,7 +58,7 @@ export default function HeroContents() {
         </motion.p>
         <div className="flex mt-3 justify-center align-items-left max-w-[600px]">
           <motion.a variants={slideInFromLeft(1)}>
-            <button> Download CV</button>
+            <a href="#projects"><btn> Download CV</btn></a>
           </motion.a>
         </div>
       </div>

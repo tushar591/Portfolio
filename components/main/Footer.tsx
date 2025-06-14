@@ -1,71 +1,118 @@
-import React from "react";
-import {
-  RxDiscordLogo,
-  RxGithubLogo,
-} from "react-icons/rx";
+"use client";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Button from "../sub/SendButton";
+import Footer from "../sub/LastFooter";
 
-import { FaYoutube } from "react-icons/fa";
+const Contact = () => {
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
 
-const Footer = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_suzujsa",
+        "template_cfdtdbm",
+        form.current,
+        "zdcoy_rxXW6Zbm5sp"
+      )
+      .then(
+        () => {
+          setIsSent(true);
+          form.current.reset();
+          toast.success("Message sent successfully! ✅", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "dark",
+          });
+        },
+        (error) => {
+          console.error("Error sending message:", error);
+          toast.error("Failed to send message. Please try again.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "dark",
+          });
+        }
+      );
+  };
+
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
-        <div className="w-full flex flex-col items-center justify-center m-auto">
-            <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-                
+    <section
+      id="contact"
+      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw]"
+    >
+      {/* Toast Container */}
+      <ToastContainer />
 
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Community</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Youtube</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Github</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Discord</span>    
-                    </p>
-                </div>
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Social Media</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Instagram</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </p>
-                </div>
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">About</div>
-                   <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                     
-                        <span className="text-[15px] ml-[6px]">Become Sponsor</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                      
-                        <span className="text-[15px] ml-[6px]">Learning about me</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                  
-                        <span className="text-[15px] ml-[6px]">tushar9445958996@gmail.com</span>    
-                    </p>
-                </div>
-            </div>
+      {/* Section Title */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-white">CONTACT</h2>
+        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
+        <p className="text-gray-400 mt-4 text-lg font-semibold">
+          I’d love to hear from you—reach out for any opportunities or
+          questions!
+        </p>
+      </div>
 
-            <div className="mb-[20px] text-[15px] text-center">
-                &copy; Tushars Portfolio
-            </div>
-        </div>
-    </div>
-  )
-}
+      {/* Contact Form */}
+      <div className="mt-8 w-full max-w-md bg-[#0d081f] p-6 rounded-lg shadow-lg border border-gray-700">
+        <h3 className="text-xl font-semibold text-white text-center">
+          Connect With Me <span className="ml-1">🚀</span>
+        </h3>
 
-export default Footer
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="mt-4 flex flex-col space-y-4"
+        >
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="4"
+            required
+            className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
+          />
+
+          {/* Send Button */}
+          <button type="submit"><Button/></button>
+        </form>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
