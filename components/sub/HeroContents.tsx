@@ -11,9 +11,9 @@ export default function HeroContents() {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 mt-20 w-full z-[20]"
+      className="flex flex-row items-center justify-between px-20 mt-20 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-50vw flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-3 mt-20 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
@@ -65,7 +65,7 @@ export default function HeroContents() {
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="hidden md:justify-center md:flex w-full h-full"
+        className="hidden  md:justify-center md:flex w-small h-small"
       >
         <Tilt
           className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
@@ -79,8 +79,8 @@ export default function HeroContents() {
           <Image
             src="/mainIconsdark.svg"
             alt="work icons"
-            height={650}
-            width={650}
+            height={550}
+            width={550}
           />
         </Tilt>
       </motion.div>

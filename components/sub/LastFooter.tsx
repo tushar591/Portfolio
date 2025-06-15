@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Footer2 = () => {
   // Smooth scroll function

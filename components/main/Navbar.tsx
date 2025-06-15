@@ -1,6 +1,6 @@
-import { Socials } from "../../constants/social";
-import Image from "next/image";
 import React from "react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 
 const Navbar = () => {
   return (
@@ -33,19 +33,31 @@ const Navbar = () => {
             <a href="#projects" className="cursor-pointer">
               Projects
             </a>
+            <a href="#contact" className="cursor-pointer">
+              Contact me
+            </a>
           </div>
         </div>
 
         <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <Image
-              src={social.src}
-              alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/tushar-bharat-9a18b9317/"
+            className="hover:text-purple-500 hover:scale-130 text-sm sm:text-base my-1"
+          >
+            <RainbowButton>
+              <FaLinkedin size={24} />
+            </RainbowButton>
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/tushar591"
+            className="hover:text-purple-500 hover:scale-130 text-sm sm:text-base my-1"
+          >
+            <RainbowButton>
+              <FaGithub className="w-12 h-12"/>
+            </RainbowButton>
+          </a>
         </div>
       </div>
     </div>
