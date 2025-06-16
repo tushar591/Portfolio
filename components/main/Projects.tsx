@@ -48,7 +48,7 @@ const Projects = () => {
           </a>
 
           {/* Project Details */}
-          <div className="w-full">
+          <div className="w-full">     
             <h3 className="text-blue-300 font-bold text-2xl md:text-4xl">
               Course-Heaven
             </h3>

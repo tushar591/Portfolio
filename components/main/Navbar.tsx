@@ -1,6 +1,8 @@
 import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
+
 
 const Navbar = () => {
   return (
@@ -59,7 +61,17 @@ const Navbar = () => {
             </RainbowButton>
           </a>
         </div>
-      </div>
+      </div>  
+      <ScrollProgress
+  className="
+    fixed
+    top-16      
+    left-0
+    h-0.75         
+    z-40    
+    bg-purple-600    
+  "
+/>
     </div>
   );
 };
