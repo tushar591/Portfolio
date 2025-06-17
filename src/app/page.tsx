@@ -5,10 +5,14 @@ import Projects from '../../components/main/Projects';
 
 export default function Home() {
   return (
-   <main className='max-w-screen-xl mx-auto w-full px-4 sm:px-6 lg:px-8'>
+   <main className='h-full w-full '>
+    <div className='flex flex-col gap-20'>
         <Hero />
         <Skills />
         <Projects />
+       
+    </div>
+
    </main>
   );
 }
