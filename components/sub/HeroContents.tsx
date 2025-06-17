@@ -11,28 +11,26 @@ export default function HeroContents() {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-between px-20 mt-20 w-full z-[20]"
+      className="flex flex-col md:flex-row items-center mx-auto justify-between px-4 md:px-20 mt-20 w-full z-[20]"
     >
-      <div className="h-full w-50vw flex flex-col gap-5 justify-center m-auto text-start">
+      {/* Text block: full width on mobile, half on md+ */}
+      <div className="w-full md:w-1/2 flex flex-col gap-5 justify-center text-start">
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-3 mt-20 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+          className="mt-20 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          <span className="">
-            Hi, I&apos;m <span> Tushar Bharat </span>
-            <div className="m-3justify-center align-center text-4xl">
+          <span>
+            Hi, I&apos;m <span>Tushar Bharat</span>
+            <div className="m-3 text-4xl text-center md:text-left">
               I am a
               <RotatingText
                 texts={["Fullstack Developer", "Coder!", "UI/UX Designer"]}
                 mainClassName="
-    
-    bg-gradient-to-r from-purple-500 to-cyan-500
-    bg-clip-text text-transparent
-    font-bold
-    text-3xxl md:text-3xxl
-    leading-tight
-    overflow-hidden whitespace-nowrap
-  "
+                  bg-gradient-to-r from-purple-500 to-cyan-500
+                  bg-clip-text text-transparent
+                  font-bold text-3xxl md:text-3xxl
+                  leading-tight overflow-hidden whitespace-nowrap
+                "
                 staggerFrom="last"
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -56,16 +54,18 @@ export default function HeroContents() {
           other modern technologies to create seamless user experiences and
           efficient solutions.
         </motion.p>
-        <div className="flex mt-3 justify-center align-items-left max-w-[600px]">
+
+        <div className="flex mt-3 justify-center">
           <motion.a variants={slideInFromLeft(1)}>
             <a href="#projects"><btn> Download CV</btn></a>
           </motion.a>
         </div>
       </div>
 
+      {/* Image block: hidden on mobile, flex on md+ */}
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="hidden  md:justify-center md:flex w-small h-small"
+        className="hidden md:flex justify-center w-[30rem] h-[30rem]"
       >
         <Tilt
           className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
@@ -85,5 +85,5 @@ export default function HeroContents() {
         </Tilt>
       </motion.div>
     </motion.div>
-  );
+);
 }
