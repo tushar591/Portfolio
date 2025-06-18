@@ -8,7 +8,7 @@ const Projects = () => {
       {/* Portfolio Projects Section */}
       <section
         id="projects"
-        className="max-w-screen-xl mx-auto px-4 relative pb-8 sm:pb-16 text-white"
+        className="flex flex-col align-items-center justify-center gap-3 h-full relative pb-0 py-5 text-white"
       >
         {/* Section Title */}
         <h2 className="text-3xl sm:text-[40px] bg-gray-900 relative z-10 font-bold px-4 py-2 w-max mx-auto text-center text-blue-400 sm:border-b-2 border-blue-400">
@@ -26,7 +26,7 @@ const Projects = () => {
 
           <a
             href="https://e-commerce-website-ten-eta.vercel.app/"
-            className="flex pr-20 w-full relative justify-center sm:justify-start"
+            className="flex px-20 w-full relative justify-center sm:justify-start"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -48,7 +48,7 @@ const Projects = () => {
           </a>
 
           {/* Project Details */}
-          <div className="w-full">     
+          <div className="px-10 w-full">     
             <h3 className="text-blue-300 font-bold text-2xl md:text-4xl">
               Course-Heaven
             </h3>
@@ -93,7 +93,7 @@ const Projects = () => {
         {/* Project 2 */}
         <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[20px] items-center sm:mt-20 relative">
           {/* Content on left side for this project */}
-          <div className="order-2 sm:order-1 w-full">
+          <div className="order-2 pl-10 sm:order-1 w-full">
             <h3 className="text-yellow-300 font-bold text-2xl md:text-4xl">
               Snake-Game
             </h3>
@@ -131,7 +131,7 @@ const Projects = () => {
           <a
             href="https://snake-game-beta-lyart.vercel.app/"
             target="_blank"
-            className="order-1 pl-10 sm:order-2 flex relative justify-center sm:justify-start"
+            className="order-1 px-20 sm:order-2 flex relative justify-center sm:justify-start"
           >
             <TiltedRightCard
               imageSrc="/Snake-game.png"
