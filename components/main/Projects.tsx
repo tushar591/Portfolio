@@ -19,7 +19,7 @@ const Projects = () => {
         <div className="w-[2px] hidden sm:block bg-blue-400 absolute top-0 bottom-0 left-1/2 -translate-x-1/2"></div>
 
         {/* Project 1 */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[20px] items-center sm:mt-20 relative">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[0px] items-center sm:mt-0 relative">
           {/* Timeline elements for desktop */}
           <div className="h-[1px] left-[10%] right-1/2 bg-blue-400 absolute top-1/2 hidden sm:block"></div>
           <div className="w-4 h-4 rounded-full border-[3px] border-blue-300 absolute left-1/2 -translate-x-1/2 bg-gray-900 z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
@@ -91,7 +91,7 @@ const Projects = () => {
         </div>
 
         {/* Project 2 */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[20px] items-center sm:mt-20 relative">
+        <div className="flex flex-col sm:flex-row gap-4 mt-12 sm:gap-[0px] items-center sm:mt-0 relative">
           {/* Content on left side for this project */}
           <div className="order-2 pl-10 sm:order-1 w-full">
             <h3 className="text-yellow-300 font-bold text-2xl md:text-4xl">
@@ -150,6 +150,73 @@ const Projects = () => {
             />
             
           </a>
+        </div>
+
+        {/* Project 3 */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 sm:gap-[0px] items-center sm:mt-0 relative">
+          {/* Timeline elements for desktop */}
+          <div className="h-[1px] left-[10%] right-1/2 bg-blue-400 absolute top-1/2 hidden sm:block"></div>
+          <div className="w-4 h-4 rounded-full border-[3px] border-blue-300 absolute left-1/2 -translate-x-1/2 bg-gray-900 z-10 hover:scale-110 ease-in-out duration-100 hidden sm:block"></div>
+
+          <a
+            href="https://interview-platform-code-sync.vercel.app/"
+            className="flex px-20 w-full relative justify-center sm:justify-start"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TiltedCard
+              imageSrc="/project3.png"
+              altText="TalentLoom"
+              captionText=""
+              containerHeight="500px"
+              containerWidth="500px"
+              imageHeight="300px"
+              imageWidth="450px"
+              rotateAmplitude={12}
+              scaleOnHover={1.2}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={<p className="">Talent Loom</p>}
+            />
+          </a>
+
+          {/* Project Details */}
+          <div className="px-10 w-full">     
+            <h3 className="text-blue-300 font-bold text-2xl md:text-4xl">
+              Talent-Loom
+            </h3>
+            <span className="text-blue-300 text-base md:text-lg">
+              (Interviewing and Coding Platform)
+            </span>
+            <p className="text-justify text-sm md:text-base mt-2 text-white">
+             A full-featured interview platform (TalentLoom) that enables users to schedule, conduct, and review technical interviews. It includes real-time video conferencing, a collaborative code editor, and AI-powered mock interviews. The platform supports distinct user roles for interviewers and candidates, with secure authentication and a comprehensive dashboard for managing interview workflows.
+            </p>
+
+            {/* Technology Tags */}
+            <ul className="flex flex-wrap gap-2 mt-2">
+              {[
+                "Next.js",
+                "tailwind.css",
+                "React",
+                "Convex",
+                "Clerk",
+                "Stream",
+                "Vapi",
+                "OpenAI",
+                "OpenRouteAI",
+                "TypeScript",
+                "figma",
+              ].map((tech) => (
+                <li
+                  key={tech}
+                  className="border rounded-[50px] border-gray-400 px-[10px] py-[5px] text-sm md:text-base text-white"
+                >
+                  #{tech}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
       </section>

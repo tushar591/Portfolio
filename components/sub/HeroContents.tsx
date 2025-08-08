@@ -5,8 +5,29 @@ import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import Image from "next/image";
 import RotatingText from "./RotatingText";
 import Tilt from "react-parallax-tilt";
+import { toast } from 'react-hot-toast';
+
 
 export default function HeroContents() {
+  const slideInFromLeft = (delay : number) => ({
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: delay,
+        duration: 0.5,
+      },
+    },
+  });
+  
+  const handleResumeClick = () => {
+    toast.success("I'd be happy to share my resume! Just send me a message.", {
+      duration: 5000, 
+      position: 'top-center',
+    });
+  };
+
   return (
     <motion.div
       initial="hidden"
@@ -57,9 +78,11 @@ export default function HeroContents() {
           efficient solutions.
         </motion.p>
         <div className="flex mt-3 justify-center align-items-left max-w-[600px]">
-          <motion.a variants={slideInFromLeft(1)}>
-            <a href="#projects"><btn> Download CV</btn></a>
-          </motion.a>
+         <motion.a
+         onClick={handleResumeClick} 
+         variants={slideInFromLeft(1)}>
+             <a href="#contact"><btn> Resume</btn></a>
+        </motion.a>
         </div>
       </div>
 

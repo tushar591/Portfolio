@@ -5,6 +5,7 @@ import StarsCanvas from "../../components/main/StarBackground";
 import Navbar from "../../components/main/Navbar";
 import Footer from "../../components/main/Footer";
 import Footer2 from "../../components/sub/LastFooter";
+import { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <Footer2 />
+        <Toaster />
       </body>
     </html>
   );
