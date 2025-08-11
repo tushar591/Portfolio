@@ -5,11 +5,10 @@ import { slideInFromLeft, slideInFromRight } from "../../utils/motion";
 import Image from "next/image";
 import RotatingText from "./RotatingText";
 import Tilt from "react-parallax-tilt";
-import { toast } from 'react-hot-toast';
-
+import { toast } from "react-hot-toast";
 
 export default function HeroContents() {
-  const slideInFromLeft = (delay : number) => ({
+  const slideInFromLeft = (delay: number) => ({
     hidden: { x: -100, opacity: 0 },
     visible: {
       x: 0,
@@ -20,11 +19,11 @@ export default function HeroContents() {
       },
     },
   });
-  
+
   const handleResumeClick = () => {
     toast.success("I'd be happy to share my resume! Just send me a message.", {
-      duration: 5000, 
-      position: 'top-center',
+      duration: 5000,
+      position: "top-center",
     });
   };
 
@@ -78,29 +77,30 @@ export default function HeroContents() {
           efficient solutions.
         </motion.p>
         <div className="flex mt-3 justify-center align-items-left max-w-[600px]">
-         <motion.a
-         onClick={handleResumeClick} 
-         variants={slideInFromLeft(1)}>
-             <a href="#contact"><btn> Resume</btn></a>
-        </motion.a>
+          <motion.a onClick={handleResumeClick} variants={slideInFromLeft(1)}>
+            <a href="#contact">
+              <btn>Resume</btn>
+            </a>
+          </motion.a>
         </div>
       </div>
 
       <motion.div
         variants={slideInFromRight(0.8)}
-        className="hidden  md:justify-center md:flex w-small h-small"
+        className="hidden md:justify-center md:flex w-small h-small p-8"
       >
         <Tilt
-          className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full"
+          className="w-30 h-30 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-purple-700 rounded-full overflow-hidden"
           tiltMaxAngleX={20}
           tiltMaxAngleY={20}
           perspective={1000}
-          scale={1.05}
+          scale={1.0}
           transitionSpeed={1000}
           gyroscope={true}
         >
           <Image
-            src="/mainIconsdark.svg"
+            className="h-full w-full object-cover"
+            src="/Profile_Img.jpg"
             alt="work icons"
             height={550}
             width={550}

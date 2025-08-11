@@ -1,6 +1,7 @@
 import React from "react";
 import TiltedCard from "./ProjectCard";
 import TiltedRightCard from "./ProjectCardright";
+import SrcButton from "./sourcebtn";
 
 const Projects = () => {
   return (
@@ -87,6 +88,9 @@ const Projects = () => {
                 </li>
               ))}
             </ul>
+            <div className="flex justify-center align-middle pt-8">
+              <SrcButton href="https://github.com/tushar591/E-Commerce_Website" />
+            </div>
           </div>
         </div>
 
@@ -121,6 +125,9 @@ const Projects = () => {
                 )
               )}
             </ul>
+            <div className="flex justify-center align-middle pt-8 mr-15">
+              <SrcButton href="https://github.com/tushar591/Snake-game" />
+            </div>
           </div>
 
           {/* Timeline elements */}
@@ -216,6 +223,9 @@ const Projects = () => {
                 </li>
               ))}
             </ul>
+            <div className="flex justify-center align-middle pt-8">
+              <SrcButton href="https://github.com/tushar591/Talent-Loom" />
+            </div>
           </div>
         </div>
 
