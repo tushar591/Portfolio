@@ -100,7 +100,7 @@ export default function HeroContents() {
         >
           <Image
             className="h-full w-full object-cover"
-            src="/Profile_Img.jpg"
+            src="/pp.jpg"
             alt="work icons"
             height={550}
             width={550}
