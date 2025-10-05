@@ -70,7 +70,7 @@ export default function HeroContents() {
           variants={slideInFromLeft(0.8)}
           className="text-lg py-3 text-gray-400 max-w-[600px]"
         >
-          I am a full-stack developer with a passion for creating innovative
+          I am a Full-stack developer with a passion for creating innovative
           solutions in building scalable web applications. Skilled in both
           front-end and back-end development, I specialize in the MERN stack and
           other modern technologies to create seamless user experiences and
