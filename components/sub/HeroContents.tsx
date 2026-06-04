@@ -43,7 +43,7 @@ export default function HeroContents() {
             <div className="m-3 justify-center align-center text-4xl">
               I am a
               <RotatingText
-                texts={["Fullstack Developer", "Coder!", "UI/UX Designer"]}
+                texts={["Fullstack Developer", "Coder!", "UI/UX Designer","Competitive Programmer"]}
                 mainClassName="
     
     bg-gradient-to-r from-purple-500 to-cyan-500
